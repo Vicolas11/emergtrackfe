@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply m-0 bg-color2 text-bgColor font-roboto;
+}
+
+::-webkit-scrollbar {
+  @apply bg-transparent w-[0.3rem] hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#c7c7c7] rounded-2xl;
+}
+
+select {
+  @apply inline-block w-full text-[#222] font-bold rounded-md outline-none;
+  @apply appearance-none text-sm py-3 pr-0 pl-5 border-[0.5px] border-color1;
+  @apply focus:border-prmColor focus:transition-all;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("https://www.svgrepo.com/show/80156/down-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  background-position: calc(100% - 20px);
+}
+
+#selected {
+  @apply text-gray-400;
+}
+
+.selected-flag {
+  @apply border-none outline-none;
+}
+
+.infinite-scroll-component__outerdiv {
+  @apply w-full;
+}
+
+.react-tel-input {
+  @apply mt-6;
+}
+
+.country-name {
+  @apply text-gray-800;
+}
+

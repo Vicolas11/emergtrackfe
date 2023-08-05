@@ -1,0 +1,42 @@
+.dashTable {
+  // max-height: calc(95vh - 8.5rem);
+  padding: 0.5rem 1rem;
+  @apply absolute overflow-auto top-[5rem] w-full mt-2 md:mt-0;
+  @apply left-0;
+}
+
+.dashTableTR {
+  @apply bg-white border-b dark:border-gray-300 cursor-pointer;
+  @apply hover:bg-gray-50 dark:hover:bg-color6;
+}
+
+.dashTableTRA {
+  @apply bg-white border-b dark:border-gray-300 cursor-pointer;
+  @apply hover:bg-gray-50 dark:hover:bg-color6 w-full;
+}
+
+.dashTableTRA td {
+  @apply font-extrabold;
+}
+
+.spinner {
+  @apply absolute inset-x-0 top-1/2 translate-y-[-50px] z-30;
+}
+
+.btn_close {
+  @apply block lg:hidden text-[#F1F1F1] font-bold bg-black py-1 text-sm rounded-md;
+  @apply px-6 fixed bottom-[50px] right-5 md:top-[80px] z-40 w-fit;
+}
+
+.desktop_btn_close {
+  @apply text-[#F1F1F1] font-bold bg-black py-1 text-sm rounded-md;
+  @apply px-6 fixed bottom-2 right-3;
+  @apply z-40 w-fit hidden lg:block;
+}
+
+.btn_pay {
+  @apply flex justify-center items-center w-fit text-white bg-prmColor py-1 px-4 rounded-lg;
+  @apply space-x-1 items-center active:scale-95 hover:bg-color3 disabled:cursor-not-allowed;
+  @apply disabled:active:scale-100 disabled:bg-gray-300;
+  transition: 0.3s;
+}

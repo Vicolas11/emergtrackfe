@@ -1,0 +1,178 @@
+.logo a {
+  @apply absolute top-4 lg:top-6 left-6 w-[8%] h-auto md:w-[6%] lg:w-[3%] cursor-pointer;
+  @apply text-prmColor flex space-x-2 items-center lit:text-xl text-2xl font-bold;
+}
+
+.login {
+  @apply flex flex-col lg:flex-row justify-between m-0 lg:overflow-hidden;
+}
+
+.logoDesktop {
+  @apply hidden lg:block;
+}
+
+.logoMobile {
+  @apply block lg:hidden;
+}
+
+.form_login {
+  @apply absolute inset-x-0 top-1/2 w-full md:w-6/12 lg:w-4/12 xl:w-[28%] mx-auto;
+  @apply translate-y-[-50%] px-4 lg:px-0 overflow-auto;
+}
+
+.img_container {
+  @apply flex flex-row justify-center w-full mb-2;
+}
+
+.img_container img {
+  @apply h-12 text-center;
+}
+
+.form_login h2 {
+  @apply text-gray-700 text-2xl font-bold text-center;
+}
+
+.form_login .are_you {
+  @apply text-gray-500 text-center mb-4;
+}
+
+.full_name {
+  @apply flex space-x-2 md:space-x-2 w-full justify-between;
+}
+
+.full_name .input_container {
+  @apply mt-2 lg:mt-4 w-full;
+}
+
+.input_container,
+.input_container_err {
+  @apply relative;
+}
+
+.label_email,
+.label_pwd {
+  @apply absolute top-[25%] p-0 m-0 left-5 text-color1 font-medium px-1;
+  @apply scale-100;
+  transition: 0.3s;
+}
+
+.input_container input {
+  @apply border bg-transparent rounded-lg border-gray-400;
+  @apply text-gray-950 font-semibold m-0 w-full px-3 py-[10px];
+  @apply focus:border-prmColor focus:outline-prmColor;
+  @apply hover:border hover:border-prmColor;
+  transition: 0.3s;
+}
+
+#input_cont_login {
+  @apply mt-6;
+}
+
+.input_container,
+.input_container_err {
+  @apply mt-6;
+}
+
+.input_container_err input {
+  @apply border bg-transparent rounded-lg border-red-600;
+  @apply text-gray-950 font-semibold m-0 w-full px-3 py-[10px];
+  @apply focus:border-red-600 focus:outline-red-600;
+  @apply hover:border hover:border-red-800;
+  transition: 0.3s;
+}
+
+.err_msg {
+  @apply text-left ml-1 text-xs mt-1 mb-0 pb-0 justify-start text-red-600;
+  @apply font-normal;
+}
+
+.input_email:focus + .label_email {
+  @apply top-[-12px] left-5 text-prmColor bg-color2 scale-90;
+}
+
+.input_pwd:focus + .label_pwd {
+  @apply top-[-12px] left-5 text-prmColor bg-color2 scale-90;
+}
+
+.label_email_blur {
+  @apply top-[-12px] left-5 text-gray-400 bg-color2 scale-90;
+}
+
+.label_pwd_blur {
+  @apply top-[-12px] left-5 text-gray-400 bg-color2 scale-90;
+}
+
+.icon_lock,
+.icon_unlock {
+  @apply absolute top-[50%] right-3 cursor-pointer translate-y-[-50%] text-gray-400;
+  @apply active:text-prmColor hover:text-prmColor;
+}
+
+.readme {
+  @apply flex items-center justify-between mb-6 text-black mt-2;
+}
+
+.readme > div {
+  @apply flex flex-row items-center cursor-pointer;
+}
+
+.check_wrapper {
+  @apply flex items-center h-5 justify-center;
+}
+
+.check_icon_label {
+  @apply absolute cursor-pointer;
+}
+
+.check_icon {
+  @apply text-[10px] text-transparent;
+}
+
+.checkBox {
+  width: 1.5rem;
+  height: 1.5rem;
+  appearance: none;
+  border-radius: 50%;
+  outline: none;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 2px solid gray;
+    border-radius: 999px;
+    background-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+  }
+
+  &:checked::before {
+    background: #5721B7; /* Change the background color of the check mark */
+    border: 2px solid #5721B7;
+  }
+
+  &:hover:not(:disabled)::before {
+    border: 2px solid #5721B7; /* Change the hover style */
+  }
+
+  &:disabled::before {
+    background-color: gray;
+    opacity: 0.5;
+  }
+}
+
+.RecoveryPwd {
+  @apply text-sm text-right font-bold text-prmColor hover:underline;
+}
+
+.btn_login {
+  @apply flex w-full text-white bg-prmColor py-3 rounded-lg disabled:active:scale-100;
+  @apply active:scale-95 hover:bg-color3 disabled:bg-gray-300 disabled:cursor-not-allowed;
+  @apply items-center justify-center text-center;
+  transition: 0.3s;
+}

@@ -1,0 +1,19 @@
+.leftSideBar {
+  @apply flex flex-row items-center space-x-3 mb-2 h-fit text-gray-800 cursor-pointer;
+}
+
+.leftSideBar iframe {
+  @apply w-full;
+}
+
+.video_title {
+  @apply font-bold m-0 p-0;
+}
+
+.leftSideBar:hover .video_title {
+  @apply text-prmColor;
+}
+
+.views {
+  @apply flex flex-row text-center space-x-1 text-gray-500;
+}

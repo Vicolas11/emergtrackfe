@@ -1,0 +1,277 @@
+$primaryColor: #eb0f5b;
+$primaryColor1: #1f2937;
+$navColor: #374151;
+$primaryColor2: #1e429f;
+$sideBarWidth: 16rem;
+$grayColor: #6b7280;
+
+.profile {
+  border-radius: 15px;
+  top: 5rem;
+  @apply absolute left-0 right-0 lg:left-60 lg:w-[calc(98%-15rem)] px-5 lg:px-4;
+  @apply md:flex-row md:justify-between overflow-y-auto flex flex-col;
+}
+
+.admin_profile {
+  max-height: calc(95vh - 5rem);
+  padding: 0.5rem 1rem;
+  @apply absolute overflow-y-auto w-full mt-2 md:mt-0 top-[4.5rem];
+  @apply lg:w-[calc(100%-15rem)] lg:left-[8rem] left-0;
+}
+
+.profiles {
+  border-radius: 15px;
+  top: 5rem;
+  margin: 0 auto;
+  width: 100%;
+  overflow-y: auto;
+  @apply flex flex-col absolute left-0 right-0;
+  @apply md:flex-row md:justify-between;
+}
+
+.manageProfile {
+  border-radius: 15px;
+  @apply w-full mb-4 px-2 py-2;
+  @apply flex flex-col h-fit md:w-4/12 lg:w-1/5 md:mb-0 md:mr-3;
+}
+
+.manageProfile h1 {
+  @apply ml-1 mt-1 font-bold text-center md:text-left;
+}
+
+.userPasswordBtn {
+  @apply flex flex-row md:items-center text-left px-2 py-2 mt-2 rounded-lg hover:bg-blue-700;
+}
+
+.userPswBtn {
+  background: $primaryColor2;
+}
+
+.manageProfile button span {
+  @apply mr-2;
+}
+
+.userProfile::-webkit-scrollbar {
+  width: 8px;
+}
+
+.userProfile::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 hover:bg-gray-400;
+}
+
+.userProfile {
+  max-height: calc(95vh - 5rem);
+  // background: $navColor;
+  border-radius: 15px;
+  @apply px-3 py-3 md:w-4/5 w-full md:overflow-y-hidden mb-4;
+  @apply landscape:overflow-y-auto overflow-y-auto;
+  @apply text-gray-600 mx-auto;
+}
+
+.userProfile h1 {
+  @apply mt-1 md:ml-3 font-bold text-center;
+  @apply md:text-left;
+}
+
+.userProfile form::-webkit-scrollbar {
+  width: 8px;
+}
+
+.userProfile form::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 hover:bg-gray-400;
+}
+
+.userProfile form {
+  // max-height: 50vh;
+  @apply px-3 md:overflow-y-auto landscape:h-fit;
+}
+
+.userImg {
+  @apply mt-2 md:ml-5 flex flex-col md:flex-row items-center text-center;
+}
+
+.userImg img {
+  border-radius: 50%;
+  @apply flex mr-3 md:w-36 w-24 md:h-36 h-24;
+}
+
+.userImg div > h1 {
+  @apply font-bold md:text-3xl text-2xl;
+}
+
+.userImg div > h2 {
+  @apply font-bold md:text-lg text-sm;
+}
+
+.inputStyle {
+  @apply bg-gray-700 border border-gray-400 sm:text-sm rounded-lg;
+  @apply focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5;
+  @apply placeholder-gray-400 text-white;
+  @apply read-only:bg-gray-600 read-only:text-gray-300;
+}
+
+.inputStyle:focus,
+.inputStyle:active {
+  border: 1px solid #5395ff;
+  outline: 1px solid #5395ff;
+}
+
+.label_lock, .label_unlock {
+  @apply absolute bottom-2 right-4 cursor-pointer hover:text-prmColor;
+}
+
+.passwordInput {
+  position: relative;
+  @apply mb-4 w-full;
+}
+
+.passwordInput button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.passwordInputCh {
+  position: relative;
+  @apply mb-4 w-full;
+}
+
+.passwordInputCh input[id="new"] {
+  @apply md:mr-1 mr-0;
+}
+
+.passwordInputCh input[id="renew"] {
+  @apply md:ml-1 ml-0;
+}
+
+.passwordInputCh label {
+  @apply text-gray-400;
+}
+
+.passwordInputCh button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 2rem;
+  margin-right: 0.5rem;
+}
+
+.uploadAvatarBtn label {
+  padding: 0.2rem;
+  margin: 0;
+  text-align: center;
+  font-size: small;
+  cursor: pointer;
+}
+
+.uploadAvatarBtn {
+  border: 2px solid #aaadb3;
+  border-radius: 10px;
+  padding: 0.2rem 0.3rem;
+  text-align: center;
+  @apply text-sm mx-1 hover:border-prmColor;
+}
+
+.uploadAvatarBtn input {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fileUpload {
+  @apply bg-prmColor border-2 border-prmColor text-white;
+  @apply hover:bg-color3 hover:border-color3;
+}
+
+.btn_reset {
+  @apply bg-red-500 rounded-lg px-3 py-1 text-sm text-white hover:bg-red-700;
+}
+
+.select {
+  [class$="-control"] {
+    @apply text-white bg-gray-700 border border-gray-600;
+    @apply focus:ring-gray-100 focus:border-blue-100 w-full p-0;
+    @apply placeholder-gray-400 sm:text-sm rounded-lg;
+  }
+}
+
+.deleteAccount {
+  // background: $primaryColor1;
+  @apply mt-2 border border-gray-500 rounded-lg px-5 py-5 text-center md:text-left;
+}
+.deleteAccount h1 {
+  @apply text-2xl text-red-600;
+}
+
+.deleteAccount button {
+  @apply border border-red-600 px-3 py-1 mt-2 rounded-lg;
+  @apply hover:bg-red-600 hover:text-white;
+}
+
+// *********
+.input_wrapper {
+  @apply flex flex-col w-full border-2 rounded-[10px] border-gray-400 px-2;
+  @apply hover:border-prmColor py-1 relative;
+}
+
+.row_wrapper {
+  @apply flex flex-col md:flex-row justify-between mb-4 w-full space-y-3 md:space-y-0 md:space-x-2;
+}
+
+.input_wrapper label {
+  @apply text-gray-400 font-medium;
+}
+
+.input_wrapper input {
+  @apply read-only:text-gray-400 font-bold;
+}
+
+.input_wrapper input:focus {
+  @apply border-none outline-none;
+}
+
+.input_wrapper:focus-within {
+  @apply border-prmColor;
+}
+
+.label_fname,
+.fname,
+.label_lname,
+.lname,
+.label_email,
+.label_phone_num,
+.label_username,
+.username,
+.label_userID,
+.userID {
+  @apply pl-[.3rem];
+}
+
+.email {
+  @apply pt-[.5rem] pl-[.3rem];
+}
+
+.input_phone {
+  @apply border bg-transparent rounded-lg border-gray-400;
+  @apply text-gray-950 font-semibold w-full pl-[50px] py-[10px];
+  @apply focus:border-prmColor focus:outline-prmColor;
+  @apply hover:border hover:border-prmColor;
+  transition: 0.3s;
+}
+
+.input_err_phone {
+  @apply border bg-transparent rounded-lg border-red-600;
+  @apply text-gray-950 font-semibold w-full pl-[50px] py-[10px];
+  @apply focus:border-red-600 focus:outline-red-600;
+  @apply hover:border hover:border-red-700;
+  transition: 0.3s;
+}
+
+.btn_save {
+  @apply flex w-full md:w-3/12 text-white bg-prmColor py-3 rounded-lg disabled:active:scale-100;
+  @apply active:scale-95 hover:bg-color3 disabled:bg-gray-300 disabled:cursor-not-allowed;
+  @apply items-center justify-center text-center;
+  transition: 0.3s;
+}

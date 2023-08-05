@@ -1,0 +1,100 @@
+.request {
+  @apply w-full mx-auto text-gray-700 h-screen relative bg-white overflow-y-auto;
+  box-shadow: -10px 0 22px rgba(0, 0, 0, 0.9);
+}
+
+.request_div {
+  @apply flex flex-col lg:flex-row w-full space-y-2 lg:space-y-0 lg:space-x-2;
+}
+
+.request > form {
+  @apply absolute top-1/2 translate-y-[-50%] mx-auto inset-x-0 w-[80%];
+  @apply flex flex-col space-y-4 md:w-[70%] mt-5 lit:mt-10 lg:mt-0;
+}
+
+.request > form > h2 {
+  @apply font-bold pl-2 mb-[-.5rem] text-lg text-center lg:text-left;
+}
+
+.resp {
+  @apply mt-2 font-medium text-gray-700 text-center lg:text-left;
+}
+
+.select_wrapper {
+  @apply relative w-full;
+}
+
+.err_msg {
+  @apply text-left ml-1 text-xs mt-1 mb-0 pb-0 justify-start text-red-600;
+  @apply font-normal;
+}
+
+.label_vin,
+.label_num,
+.label_location,
+.label_info {
+  @apply pl-[.3rem];
+}
+
+.vin,
+.plate_num,
+.location,
+.info {
+  @apply pl-[.3rem];
+}
+
+.label_color {
+  @apply absolute top-[50%] translate-y-[-50%] m-0 left-0 pl-[.8rem];
+  @apply scale-100 text-gray-400 font-medium;
+  transition: 0.1s linear;
+}
+
+.label_brand {
+  @apply absolute top-[50%] translate-y-[-50%] m-0 left-0 pl-[.8rem];
+  @apply scale-100 text-gray-400 font-medium;
+  transition: 0.1s linear;
+}
+
+.label_color_blur {
+  @apply top-[16px] left-0 pl-[.8rem] text-gray-400 scale-90;
+}
+
+.label_brand_blur {
+  @apply top-[16px] left-0 pl-[.8rem] text-gray-400 scale-90;
+}
+
+.input_wrapper {
+  @apply flex flex-col w-full border-2 rounded-[10px] border-gray-400 px-2;
+  @apply hover:border-prmColor py-1;
+}
+
+.input_wrapper label {
+  @apply text-gray-400 font-medium;
+}
+
+.input_wrapper input {
+  @apply font-bold;
+}
+
+.input_wrapper input:focus {
+  @apply border-none outline-none;
+}
+
+.input_wrapper:focus-within {
+  @apply border-prmColor;
+}
+
+textarea {
+  @apply border-none outline-none;
+}
+
+.btn_request_wrapper {
+  @apply w-full flex justify-center lg:justify-start text-center;
+}
+
+.btn_request {
+  @apply flex items-center justify-center w-full md:w-7/12 lg:w-5/12 text-white bg-prmColor py-3 rounded-lg;
+  @apply active:scale-95 hover:bg-color3 disabled:bg-gray-300 disabled:cursor-not-allowed;
+  @apply disabled:active:scale-100 disabled:font-medium space-x-1;
+  transition: 0.3s;
+}

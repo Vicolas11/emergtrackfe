@@ -1,0 +1,158 @@
+.navbar {
+  @apply flex flex-row justify-between items-center py-3 md:py-4 bg-bgColor shadow-md;
+  @apply text-prmColor fixed top-0 left-0 w-full px-1 md:px-3 z-50;
+}
+
+.navbar_logo {
+  @apply flex items-center cursor-pointer space-x-2;
+  @apply font-bold lg:text-2xl;
+}
+
+.navbar_link {
+  @apply flex flex-row md:space-x-3 space-x-5;
+}
+
+.logo {
+  @apply pl-2 w-[18%] h-auto md:w-[12%] lg:w-[8%] xl:w-[6%] p-0 m-0;
+}
+
+.logo h5 {
+  @apply lit:hidden;
+}
+
+.nav_link {
+  @apply w-full list-none hidden md:flex md:space-x-5 lg:space-x-8;
+  @apply md:mt-3 justify-around;
+}
+
+.nav_link li {
+  @apply flex items-center space-x-1 relative hover:text-color5;
+}
+
+.li_msg, .li_mgs_mobile {
+  @apply relative;
+}
+
+.num_of_msgs {
+  @apply absolute top-[-8px] left-[-12px] bg-red-700 text-white rounded-[999px];
+  @apply w-5 h-5 font-normal text-sm z-20 flex items-center justify-center p-2;
+}
+
+.num_of_msgs_mobile {
+  @apply absolute top-[5px] left-[115px] bg-red-700 text-white rounded-[999px];
+  @apply w-5 h-5 font-normal text-sm z-20 flex items-center justify-center p-2;
+}
+
+.nav_link li:hover::after {
+  @apply absolute left-0 bottom-[25px] w-1/2 h-[2px];
+  @apply bg-color5 text-color5;
+  content: "";
+}
+
+.nav_link li:hover::after {
+  @apply absolute left-0 bottom-[25px] w-1/2 h-[2px];
+  @apply bg-color5 text-color5;
+  content: "";
+}
+
+.nav_li_active {
+  @apply font-bold relative inline-block;
+}
+
+.nav_li_active::after {
+  @apply absolute left-0 bottom-[25px] w-1/2 h-[2px] bg-prmColor;
+  @apply hover:bg-color5;
+  content: "";
+}
+
+.nav_link_phone {
+  @apply w-full list-none md:hidden flex flex-col lg:space-x-1 md:space-x-2;
+  @apply absolute left-0 top-8 mt-[32px] bg-bgColor z-30;
+  @apply text-prmColor shadow-md;
+}
+
+.nav_link_phone li {
+  @apply flex items-center space-x-1 pl-4 py-3 relative;
+  @apply hover:bg-color5 hover:text-bgColor w-full;
+}
+
+.nav_link_phone .nav_mobile_li_active {
+  @apply bg-prmColor text-bgColor;
+}
+
+.input_search {
+  @apply rounded-3xl w-full placeholder:ml-4 py-2 px-4 text-black bg-transparent;
+  @apply border border-prmColor focus:border-prmColor focus:outline-prmColor;
+}
+
+.navbar_text {
+  @apply text-2xl landscape:text-2xl md:text-2xl;
+  @apply text-prmColor font-bold tracking-wide;
+}
+
+.icons_wrap {
+  @apply absolute top-1/2 translate-y-[-50%] right-4 cursor-pointer;
+  @apply flex items-center space-x-2;
+}
+
+.icon_regex {
+  @apply cursor-pointer hover:text-color4;
+}
+
+.icon_regex_active {
+  @apply bg-prmColor text-color2 rounded-[999px] p-1 hover:bg-color4;
+}
+
+.icon_search {
+  @apply cursor-pointer hover:text-color4;
+}
+
+.btn_upload {
+  @apply inline-flex items-center space-x-4 px-2 py-1 rounded-md bg-prmColor;
+  @apply active:scale-75 border-2 border-prmColor font-medium text-bgColor;
+  @apply hover:bg-color3 hover:border-color3;
+  transition: 0.3s;
+}
+
+.btn_filter {
+  @apply inline-flex items-center space-x-4 px-2 py-1 rounded-md;
+  @apply active:scale-75 border-2 border-prmColor font-medium;
+  @apply hover:bg-prmColor hover:text-bgColor;
+  transition: 0.3s;
+}
+
+.desktop_logout {
+  @apply hidden space-x-2 items-center absolute top-14 right-6 z-50 w-fit;
+  @apply bg-bgColor py-3 px-5 cursor-pointer whitespace-nowrap;
+  @apply rounded-b font-medium text-color1 hover:bg-gray-50 hover:text-prmColor;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.avatar:hover .desktop_logout {
+  @apply sm:flex;
+}
+
+.avatar {
+  @apply flex items-center space-x-2;
+}
+
+.avatar_wrapper {
+  @apply flex space-x-3 justify-end items-center px-2;
+}
+
+.avatar .profile_name {
+  @apply flex flex-row justify-evenly items-center;
+  @apply font-semibold;
+}
+
+.avatar .profile_name img {
+  @apply w-full max-w-[12px] h-auto;
+}
+
+.mobile_dropdownline {
+  @apply block md:hidden cursor-pointer;
+}
+
+.desktop_dropdownline {
+  @apply md:block hidden cursor-pointer;
+}

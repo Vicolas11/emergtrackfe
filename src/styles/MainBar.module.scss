@@ -1,0 +1,11 @@
+.mainbar_text {
+  @apply flex flex-row items-center mt-3 justify-between;
+}
+
+.video_title {
+  @apply text-prmColor font-bold text-lg w-[70%];
+}
+
+.details {
+  @apply flex flex-row text-center space-x-1 text-gray-800;
+}

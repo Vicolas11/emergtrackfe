@@ -1,0 +1,28 @@
+.container {
+  @apply flex absolute bottom-3 left-0 right-0 w-fit mx-auto space-x-3;
+}
+
+.pagination {
+  @apply flex items-center space-x-2;
+}
+
+.pagination li {
+  @apply rounded-[999px] w-6 h-6 bg-gray-400 hover:bg-color3 justify-center;
+  @apply text-white cursor-pointer text-center text-sm space-x-2 flex items-center;
+}
+
+.pagination li.pgActive {
+  @apply bg-prmColor;
+}
+
+.pagination li.dots {
+  @apply cursor-default bg-transparent text-gray-500;
+}
+
+.btn_prev,
+.btn_nxt {
+  @apply flex w-fit text-white bg-prmColor py-1 px-2 rounded-md disabled:active:scale-100;
+  @apply active:scale-95 hover:bg-color3 disabled:bg-gray-300 disabled:cursor-not-allowed;
+  @apply items-center justify-center text-center text-sm text-white;
+  transition: 0.3s;
+}

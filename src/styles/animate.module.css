@@ -1,0 +1,172 @@
+.animateEnterActive {
+  animation: ModalOpen 0.4s ease-out forwards;
+}
+
+.animateExitActive {
+  animation: ModalClose 1s ease-out forwards;
+}
+
+.fadeEnterActive {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.fadeExitActive {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+/* ADMIN SIDEBAR */
+.slideEnterActive {
+  animation: SlideOpen 0.4s ease-out forwards;
+}
+
+.slideExitActive {
+  animation: SlideClose 0.4s ease-out forwards;
+}
+
+/* NAVBAR */
+.navBarEnterActive {
+  animation: NavBarOpen 0.4s ease-out forwards;
+}
+
+.navBarExitActive {
+  animation: NavBarClose 0.4s ease-out forwards;
+}
+
+/* NAVBAR Button */
+.menubtn-enter .btn {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.menubtn-enter-active .btn {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.menubtn-exit .btn {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.menubtn-exit-active .btn {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.menubtn-enter-active .btn,
+.menubtn-exit-active .btn {
+  transition: opacity 400ms;
+  transition: transform 400ms;
+}
+
+/* SIGNUP BTN */
+.signupEnterActive {
+  animation: SignupOpen 0.4s ease-out forwards;
+}
+
+.signupExitActive {
+  animation: SignupClose 0.4s ease-out forwards;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes ModalOpen {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ModalClose {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes SlideOpen {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes SlideClose {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes NavBarOpen {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes NavBarClose {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes SignupOpen {
+  0% {
+    /* opacity: 0; */
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(1%);
+  }
+}
+
+@keyframes SignupClose {
+  0% {
+    /* opacity: 1; */
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+}

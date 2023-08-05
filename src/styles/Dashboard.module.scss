@@ -1,0 +1,456 @@
+$primaryColor1: #1f2937;
+$navColor: #374151;
+$primaryColor2: #1e429f;
+$sideBarWidth: 15rem;
+
+.main_aside {
+  @apply hidden lg:block lg:w-60 fixed z-10 w-8/12 md:w-5/12;
+  @apply h-screen bg-prmColor;
+}
+
+.aside::-webkit-scrollbar {
+  width: 10px;
+}
+
+.aside::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 hover:bg-gray-400;
+}
+
+.aside::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.aside {
+  @apply lg:hidden lg:w-60 fixed z-50 w-8/12;
+  @apply md:w-5/12 h-screen bg-prmColor landscape:overflow-y-auto;
+}
+
+.showAside {
+  @apply lg:hidden fixed top-1/2 landscape:top-[40%];
+  @apply py-1 z-20 text-5xl cursor-pointer;
+  @apply rounded-full left-0;
+}
+
+.sideBarBtnWrapper {
+  @apply mt-5 ml-9 overflow-y-auto;
+}
+
+.sideBarBtnWrapper a > span {
+  @apply ml-2;
+}
+
+.sideBarBtn {
+  @apply flex flex-row items-center py-2 pl-2 text-gray-300;
+  @apply hover:cursor-pointer hover:text-yellow-500;
+  border-radius: 15px 0 0 15px;
+}
+
+.sideBarBtn > img:nth-child(3) {
+  @apply hidden;
+}
+
+.sideBarBtn:hover > img:nth-child(3) {
+  @apply block;
+}
+
+.sideBarBtn:hover > img:first-child {
+  @apply hidden;
+}
+
+.sideBarBtn:hover > img:nth-child(2) {
+  @apply hidden;
+}
+
+.sideBarBtn > img:first-child {
+  @apply hidden;
+}
+
+.btnSideBar {
+  @apply space-x-2 flex flex-row items-center py-2 pl-2 text-gray-300;
+  @apply hover:cursor-pointer hover:text-yellow-500;
+}
+
+.active {
+  @apply bg-bgColor text-prmColor font-bold;
+}
+
+.sideBarBtn.active > img:nth-child(2) {
+  @apply hidden;
+}
+
+.sideBarBtn.active > img:first-child {
+  @apply block;
+}
+
+.sideBarBtn.active:hover > img:first-child {
+  @apply hidden;
+}
+
+// DASHEADER
+.dashHeader {
+  // top: 1rem;
+  background: $primaryColor1;
+  @apply fixed left-0 w-full lg:w-[calc(100vw-15rem)] top-0 overflow-y-auto;
+  @apply inline-flex justify-between items-center px-3 lit:px-1 py-4 lg:ml-[15rem] z-10 mb-4;
+}
+
+.dashHeader h1 {
+  @apply font-bold md:text-xl text-sm overflow-x-auto lg:text-2xl m-0 px-3;
+}
+
+.dashHeader div {
+  @apply flex flex-row justify-between items-center;
+}
+
+.dashHeader > div:nth-child(2) {
+  @apply justify-end md:space-x-2;
+}
+
+.dashHeader div > span {
+  @apply pl-3 ml-1 cursor-pointer;
+}
+
+.dashHeader div > span:first-child,
+.dashHeader div > span:nth-child(2) {
+  background: $navColor;
+  box-shadow: 0px 0px 1px #000000;
+  border-radius: 9999px;
+  display: inline-block;
+  padding: 0.38rem 0.38rem;
+  @apply hover:bg-blue-700;
+}
+
+.dashHeader div > span:nth-child(2) {
+  @apply lit:hidden;
+}
+
+.num_of_msgs {
+  @apply absolute top-[-8px] left-[-12px] bg-red-700 text-white rounded-[999px];
+  @apply w-5 h-5 font-normal text-sm z-20 flex items-center justify-center p-2;
+}
+
+.username {
+  @apply flex flex-row items-center;
+}
+
+.username div {
+  @apply flex flex-col justify-end mr-2;
+}
+
+.username div > h3 {
+  @apply m-0 font-medium text-sm;
+}
+
+.username div > p {
+  @apply p-0 text-xs;
+  margin-top: -0.4rem;
+  margin-left: 0.7rem;
+}
+
+.displayPic {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid #eaeaea;
+  background: #cccccc;
+}
+
+// TABLE
+.dashTableTR {
+  @apply border-b bg-gray-800 border-gray-700;
+  @apply hover:bg-color6;
+}
+
+.dashTableTRA {
+  @apply border-b bg-gray-900 border-gray-800;
+  @apply hover:bg-color6 font-extrabold;
+}
+
+.dashTableTRA td {
+  @apply font-extrabold;
+}
+
+// LISTSTUDENT
+.mainHeader {
+  z-index: 16;
+  top: 4.5rem;
+  background: $primaryColor1;
+  @apply ml-0 lg:w-[calc(100%-15rem)] w-full;
+  @apply flex justify-between left-0 lg:left-60;
+  @apply flex-row text-center md:text-left fixed px-5 space-x-2;
+  @apply right-0 mx-auto mb-4 items-center mt-2 md:mt-0;
+}
+
+.mainHeaderUser {
+  z-index: 16;
+  top: 4.5rem;
+  background: $primaryColor1;
+  @apply ml-0 w-full;
+  @apply flex justify-between left-0;
+  @apply flex-row text-center md:text-left fixed px-5 space-x-2;
+  @apply right-0 mx-auto mb-4 items-center mt-2 md:mt-0;
+  @apply md:top-[5.5rem] md:mb-2;
+}
+
+// LogBook Activities
+.mainHeaderAdminLog {
+  z-index: 16;
+  top: 4.5rem;
+  background: $primaryColor1;
+  @apply ml-0 lg:w-[calc(100%-15rem)] w-full;
+  @apply flex justify-center md:justify-between flex-col-reverse;
+  @apply md:flex-row text-center md:text-left fixed px-5 left-0 lg:left-60;
+  @apply right-0 mx-auto mb-4 md:items-center;
+}
+
+.mainHeaders {
+  z-index: 16;
+  top: 4.5rem;
+  background: $primaryColor1;
+  @apply flex justify-center md:justify-between flex-col-reverse;
+  @apply md:flex-row text-center md:text-left fixed px-5 left-0;
+  @apply right-0 mx-auto w-11/12 mb-4 md:items-center;
+}
+
+.mainHeaderLog {
+  z-index: 16;
+  top: 4.5rem;
+  @apply flex justify-center md:justify-between flex-col-reverse;
+  @apply md:flex-row text-center md:text-left fixed px-5 left-0 lg:left-60;
+  @apply right-0 mx-auto mb-4 md:items-center;
+}
+
+.mainHeaderLogs {
+  z-index: 16;
+  top: 4.5rem;
+  @apply flex justify-center md:justify-between flex-col-reverse;
+  @apply md:flex-row text-center md:text-left fixed px-5 left-0;
+  @apply right-0 mx-auto w-11/12 mb-4 md:items-center;
+}
+
+.mainHeaderLogStud {
+  z-index: 16;
+  top: 4.5rem;
+  @apply flex justify-center md:justify-between flex-col-reverse;
+  @apply md:flex-row text-center md:text-left fixed px-5 left-0;
+  @apply right-0 mx-auto w-11/12 mb-4 md:items-center;
+}
+
+.mainHeader div > input {
+  background: $navColor;
+  padding: 0.5rem 0.8rem 0.5rem 2.7rem;
+  border-radius: 9999px;
+  @apply relative placeholder:text-sm w-full py-3;
+}
+
+.mainHeaderUser div > input {
+  background: $navColor;
+  padding: 0.5rem 0.8rem 0.5rem 2.7rem;
+  border-radius: 9999px;
+  @apply relative placeholder:text-sm w-full py-3;
+}
+
+.mainHeaderAdminLog div > input {
+  background: $navColor;
+  padding: 0.5rem 0.8rem 0.5rem 2.7rem;
+  border-radius: 9999px;
+  @apply relative placeholder:text-sm py-2 w-full md:py-3;
+}
+
+.mainHeaders div > input {
+  background: $navColor;
+  padding: 0.5rem 0.8rem 0.5rem 2.7rem;
+  border-radius: 9999px;
+  @apply relative placeholder:text-sm w-full py-2;
+}
+
+.mainHeaderLog div > input {
+  background: $navColor;
+  padding: 0.5rem 0.8rem 0.5rem 2.7rem;
+  border-radius: 9999px;
+  @apply relative placeholder:text-sm w-full;
+}
+
+.mainHeaderLogs div > input {
+  background: $navColor;
+  padding: 0.5rem 0.8rem 0.5rem 2.7rem;
+  border-radius: 9999px;
+  @apply relative placeholder:text-sm w-full py-3;
+}
+
+.mainHeaderLogStud div > input {
+  background: $navColor;
+  padding: 0.5rem 0.8rem 0.5rem 2.7rem;
+  border-radius: 9999px;
+  @apply relative placeholder:text-sm w-full py-3;
+}
+
+.mainHeader div > span {
+  @apply absolute left-9 top-3 mb-0;
+  @apply md:left-9 md:top-3 lg:top-3;
+}
+
+.mainHeaderUser div > span {
+  @apply absolute left-9 top-3 mb-0;
+  @apply md:left-9 md:top-3 lg:top-3;
+}
+
+.mainHeaderAdminLog div > span {
+  @apply absolute left-9 top-12 md:mt-1;
+  @apply md:left-9 md:top-2;
+}
+
+.mainHeaders div > span {
+  @apply absolute left-9 top-12;
+  @apply md:left-9 md:top-2;
+}
+
+.mainHeaderLog div > span {
+  top: 5.8rem;
+  left: 4.5rem;
+  @apply absolute;
+  @apply md:left-12 md:ml-6 md:top-4;
+}
+
+.mainHeaderLogs div > span {
+  top: 5.8rem;
+  left: 4.5rem;
+  @apply absolute;
+  @apply md:left-12 md:ml-6 md:top-4;
+}
+
+.mainHeaderLogStud div > span {
+  top: 5.8rem;
+  left: 4.5rem;
+  @apply absolute;
+  @apply md:left-10 md:ml-0 md:top-3 top-2 left-10;
+}
+
+.addBtn {
+  border-radius: 50%;
+  @apply flex flex-row items-center md:space-x-2 justify-center px-1 md:px-2 py-2 md:py-1 text-sm font-medium;
+  @apply hover:bg-blue-600 border border-blue-600 w-12 h-12 md:w-fit md:rounded-2xl;
+}
+
+.addBtn span {
+  @apply hidden md:block;
+}
+
+.littleInfo {
+  @apply flex flex-row justify-center text-left mb-2;
+}
+
+.littleInfo img {
+  width: 65px;
+  height: 75px;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+}
+
+.littleInfo div > p {
+  margin-top: -0.3rem;
+}
+
+.dashTable {
+  top: calc(3.5rem + 5rem);
+  max-height: calc(95vh - 8.5rem);
+  padding: 0.5rem 1rem;
+  @apply absolute overflow-auto w-full mt-2 md:mt-0;
+  @apply lg:w-[calc(100%-15rem)] lg:left-60 left-0;
+}
+
+.dashTableUser {
+  top: calc(3.5rem + 5rem);
+  max-height: calc(95vh - 8.5rem);
+  padding: 0.5rem 1rem;
+  @apply absolute overflow-auto w-full mt-2 md:mt-0;
+}
+
+.dashTableAdminLog {
+  top: calc(3.5rem + 5rem);
+  max-height: calc(95vh - 8.5rem);
+  padding: 0.5rem 1rem;
+  @apply absolute overflow-auto w-full mt-5 md:mt-0;
+  @apply lg:w-[calc(100%-15rem)] lg:left-60 left-0;
+}
+
+.dashTables::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dashTables::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 hover:bg-gray-400;
+}
+
+.dashTables {
+  top: 7rem;
+  max-height: calc(92vh - 7rem);
+  @apply absolute left-0 right-0 overflow-auto;
+  @apply px-2 py-3 mx-auto w-11/12 mt-11 lg:mt-4 md:mt-2;
+}
+
+.dashTableLog {
+  top: calc(3rem + 7.2rem);
+  // left: $sideBarWidth;
+  // width: calc(100% - $sideBarWidth);
+  max-height: calc(100vh - 11rem);
+  // padding: 0.5rem 1rem;
+  @apply absolute right-0 overflow-auto;
+  @apply left-0 lg:left-60 lg:w-[calc(100%-15rem)];
+  @apply px-2 py-3 mx-auto mt-12 lg:mt-2 md:mt-0;
+}
+
+.dashTableLogs::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dashTableLogs::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 hover:bg-gray-400;
+}
+
+.dashTableLogs {
+  max-height: calc(95vh - 11rem);
+  @apply absolute left-0 right-0 overflow-auto;
+  @apply px-2 py-3 mx-auto w-11/12 mt-11 lg:mt-2 md:mt-0;
+  @apply top-[5.2rem] md:top-[8.2rem];
+}
+
+.blog {
+  background: $navColor;
+  @apply flex justify-between p-4 rounded-2xl cursor-pointer;
+  // box-shadow: 1px 1px 1px #000000;
+}
+
+.blog div:first-child {
+  @apply flex flex-row;
+}
+
+.blog div > img {
+  @apply lg:w-24 lg:h-24 w-12 h-12 rounded-lg;
+}
+
+.blogContent {
+  @apply ml-2;
+}
+
+.blogContent h1 {
+  // font-size: 2rem;
+  @apply font-bold text-lg lg:text-2xl;
+}
+
+.blogContent p {
+  @apply text-gray-400 text-sm lg:text-lg;
+}
+
+.blogDate {
+  @apply text-gray-400 text-xs lg:text-sm mt-5;
+}
+
+// GRAPH
+.graph_wrapper {
+  border-radius: 15px;
+  top: 5rem;
+  height: 100vh;
+  @apply absolute flex lg:w-[calc(98%-16rem)] w-11/12 overflow-y-auto;
+  @apply lg:left-60 left-0 justify-between mx-auto right-0;
+}

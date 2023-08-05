@@ -1,0 +1,95 @@
+.mainbar {
+  @apply flex flex-row px-4 pt-4 mt-[80px];
+}
+
+.list_sidebar {
+  @apply flex flex-col max-h-[calc(100vh-100px)];
+  @apply scroll-auto w-[35%] pl-3 overflow-auto;
+}
+
+.list_sidebar_spinner {
+  @apply max-h-[calc(100vh-100px)];
+  @apply w-[35%] pl-3 border-blue-500 border-2;
+}
+
+.filters {
+  @apply flex space-x-4 w-full pt-4 px-3 mb-[-10px] fixed top-[67px];
+  @apply bg-bgColor mt-2 shadow-md z-10;
+}
+
+.select_container {
+  @apply flex flex-row space-x-4 w-full mb-4;
+}
+
+.input_actor {
+  @apply w-1/2 py-3 border border-color1 px-4 font-semibold outline-none;
+  @apply focus:border-prmColor text-color mb-4 rounded-md;
+  @apply focus:transition-all;
+}
+
+.gallary {
+  @apply w-full grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  grid-auto-rows: 280px;
+  min-width: 280px;
+}
+
+.video_title {
+  @apply text-prmColor font-bold text-lg pl-1 pt-1;
+}
+
+.gallary .videos {
+  @apply flex flex-col text-gray-800 mb-3 mx-auto;
+  @apply cursor-pointer;
+}
+
+.gallary .videos:hover .video_title {
+  @apply text-color4;
+}
+
+.gallary .videos iframe {
+  @apply w-auto h-[300px] rounded-lg;
+  flex: 1 0 calc(33.33% - 20px);
+}
+
+iframe:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.subtitle {
+  @apply space-y-1;
+}
+
+.location, .details {
+  @apply flex space-x-1;
+}
+
+.novideo {
+  @apply flex flex-col mx-auto text-center text-gray-600 absolute items-center;
+  @apply top-1/2 translate-y-[-50%] inset-x-auto w-full;
+  @apply space-y-4 justify-center;
+}
+
+.novideo h4 {
+  @apply font-bold text-3xl;
+}
+
+.novideo button {
+  @apply flex space-x-4 py-2 px-4 justify-center items-center bg-prmColor rounded-md;
+  @apply hover:bg-color3 w-fit text-bgColor;
+}
+
+.spinner {
+  @apply fixed top-1/2 translate-y-[-50%] w-full inset-x-0 flex justify-center;
+  @apply items-center text-center mx-auto;
+}
+
+.leftside_spinner {
+  @apply absolute top-1/2 translate-y-[-50%] right-[15%] flex justify-center;
+  @apply items-center text-center mx-auto;
+}
+
+.search_not_found {
+  @apply text-gray-700 font-bold text-center fixed top-1/2 translate-y-[-50%] text-2xl mx-auto w-full;
+}
