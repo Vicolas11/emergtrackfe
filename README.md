@@ -1,2 +1,2 @@
 ## EmergTrack
-EmergTrack Core backend
+EmergTrack Frontend
